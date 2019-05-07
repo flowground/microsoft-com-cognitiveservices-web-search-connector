@@ -1,0 +1,55 @@
+{
+    "title": "Web Search Client",
+    "description": "The Web Search API lets you send a search query to Bing and get back search results that include links to webpages, images, and more.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/microsoft.com/cognitiveservices-WebSearch/1.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.cognitive.microsoft.com/bing/v7.0",
+                    "{Endpoint}",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "apiKeyHeader": {
+                "label": "Ocp-Apim-Subscription-Key (apiKeyHeader)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "Web_Search": {
+            "main": "./lib/actions/Web_Search.js",
+            "title": "The Web Search API lets you send a search query to Bing and get back search results that include links to webpages, images, and more.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Web_Search.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

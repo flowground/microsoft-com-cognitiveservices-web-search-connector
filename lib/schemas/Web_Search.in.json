@@ -1,0 +1,144 @@
+{
+    "type": "object",
+    "properties": {
+        "Accept": {
+            "required": false,
+            "type": "string"
+        },
+        "Pragma": {
+            "required": false,
+            "type": "string"
+        },
+        "answerCount": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "cc": {
+            "required": false,
+            "type": "string"
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "freshness": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "Day",
+                "Week",
+                "Month"
+            ]
+        },
+        "mkt": {
+            "required": false,
+            "type": "string",
+            "default": "en-us"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "promote": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "WebPages",
+                    "Images",
+                    "SpellSuggestions",
+                    "News",
+                    "RelatedSearches",
+                    "Videos",
+                    "Computation",
+                    "TimeZone"
+                ],
+                "type": "string",
+                "x-ms-enum": {
+                    "modelAsString": true,
+                    "name": "AnswerType"
+                }
+            }
+        },
+        "q": {
+            "required": true,
+            "type": "string"
+        },
+        "responseFilter": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "WebPages",
+                    "Images",
+                    "SpellSuggestions",
+                    "News",
+                    "RelatedSearches",
+                    "Videos",
+                    "Computation",
+                    "TimeZone"
+                ],
+                "type": "string",
+                "x-ms-enum": {
+                    "modelAsString": true,
+                    "name": "AnswerType"
+                }
+            }
+        },
+        "safeSearch": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "Off",
+                "Moderate",
+                "Strict"
+            ]
+        },
+        "setLang": {
+            "required": false,
+            "type": "string"
+        },
+        "textDecorations": {
+            "required": false,
+            "type": "boolean"
+        },
+        "textFormat": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "Raw",
+                "Html"
+            ]
+        },
+        "X_BingApis_SDK": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "true"
+            ]
+        },
+        "Accept_Language": {
+            "required": false,
+            "type": "string"
+        },
+        "User_Agent": {
+            "required": false,
+            "type": "string"
+        },
+        "X_MSEdge_ClientID": {
+            "required": false,
+            "type": "string"
+        },
+        "X_MSEdge_ClientIP": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Search_Location": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
